@@ -4,4 +4,6 @@ Built with MongoDB Atlas, Node, Express.js, EJS for HTML templating, and Bootstr
 
 The capstone project for the Web Developer Bootcamp by Colt Steele on Udemy.
 
-Visit the app here: https://yelp-camp-express.herokuapp.com/
+This application is currently not live after Heroku discontinued their free product plans.
+
+Re-deploying is not a major priority at the moment, and my other projects such as MyFitnessCal are more representative of my skillset anyway.
