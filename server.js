@@ -22,8 +22,7 @@ const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 
 const User = require('./models/user');
-const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelpCamp'; // local db url
-// const dbUrl = process.env.DB_URL; // Mongo Atlas db url
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelpCamp';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
@@ -76,6 +75,8 @@ const sessionConfig = {
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
 };
+
+if (process.env.NODE_ENV === "production") sessionConfig.cookie.secure = true;
 
 app.use(session(sessionConfig));
 app.use(flash());
